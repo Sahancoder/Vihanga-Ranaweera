@@ -19,12 +19,22 @@ export function Contact() {
           TOGETHER
         </h2>
 
-        <a
-          href={`mailto:${site.email}`}
-          className="mt-12 rounded-sm bg-accent px-10 py-5 font-display text-xs font-bold uppercase tracking-widest text-white shadow-xl shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-black"
-        >
-          Contact me
-        </a>
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={`mailto:${site.email}`}
+            className="rounded-sm bg-accent px-10 py-5 font-display text-xs font-bold uppercase tracking-widest text-white shadow-xl shadow-accent/25 transition-all hover:-translate-y-0.5 hover:bg-white hover:text-black"
+          >
+            Email me
+          </a>
+          <a
+            href={site.socials.find(s => s.label === "WhatsApp")?.href || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm border border-accent bg-transparent px-10 py-5 font-display text-xs font-bold uppercase tracking-widest text-accent transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white"
+          >
+            WhatsApp
+          </a>
+        </div>
 
         {/* Meta row */}
         <div className="mt-20 grid w-full max-w-4xl grid-cols-1 gap-8 border-b border-line pb-12 sm:grid-cols-2">

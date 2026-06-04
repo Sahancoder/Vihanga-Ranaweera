@@ -63,6 +63,7 @@ const socials: Social[] = [
   // TODO: add your real links.
   { label: "LinkedIn", href: "#" },
   { label: "GitHub", href: "#" },
+  { label: "WhatsApp", href: "https://wa.me/94762610110?text=Hi%20Vihanga%2C%20I%20recently%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20or%20opportunity%20with%20you.%20Let%20me%20know%20when%20you%20are%20available!" },
 ];
 
 // TODO: replace with your real skills & honest proficiency values.
@@ -309,7 +310,8 @@ export const site = {
   role: "Business Transformation & Software Solutions",
   location: "Sri Lanka",
   available: true,
-  email: "sahanviranga18@gmail.com",
+  email: "vihangarpersonal@gmail.com",
+  phone: "+94762610110",
   description:
     "Vihanga Ranaweera — focused on digital transformation, workflow improvement, process mapping, and internal software solution development.",
 

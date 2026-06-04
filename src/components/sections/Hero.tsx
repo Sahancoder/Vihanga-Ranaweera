@@ -132,6 +132,14 @@ export function Hero() {
               Contact me
             </a>
             <a
+              href={site.socials.find(s => s.label === "WhatsApp")?.href || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-sm border border-[#25D366] bg-transparent px-8 py-4 font-display text-xs font-bold uppercase tracking-widest text-[#25D366] transition-all hover:-translate-y-0.5 hover:bg-[#25D366] hover:text-[#111111]"
+            >
+              WhatsApp
+            </a>
+            <a
               href="#work"
               className="rounded-sm border border-line px-8 py-4 font-display text-xs font-bold uppercase tracking-widest text-white/90 transition-all hover:border-white/40 hover:bg-white/5"
             >
