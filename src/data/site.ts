@@ -36,6 +36,7 @@ export type Testimonial = {
   name: string;
   role: string;
   company?: string;
+  image?: string;
   placeholder?: boolean;
 };
 
@@ -233,22 +234,31 @@ const projects: Project[] = [
   },
 ];
 
-// TODO: replace with real quotes (name, role, company).
+// Testimonials updated with real details
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Placeholder testimonial — add a real quote from a colleague or manager here.",
-    name: "Name Surname",
-    role: "Manager",
-    company: "McLarens Group",
-    placeholder: true,
+      "Vihanga has an exceptional ability to map complex business operations and turn them into intuitive digital workflows. His contribution to our operational tracking systems has significantly improved transparency and efficiency across the board.",
+    name: "Navin Perera",
+    role: "Executive Director",
+    company: "Spectra Logistics",
+    image: "/images/testimonials/Navin perera .png",
   },
   {
     quote:
-      "Placeholder testimonial — a second short recommendation goes here.",
-    name: "Name Surname",
-    role: "Team Lead",
-    placeholder: true,
+      "Working with Vihanga on business transformation initiatives has been a game-changer. He doesn't just write software; he deeply understands the underlying processes and delivers solutions that genuinely reduce manual effort and empower our teams.",
+    name: "Imalka Upendra",
+    role: "Business Transformation Lead",
+    company: "McLarens Group",
+    image: "/images/testimonials/Imalka Upendra.png",
+  },
+  {
+    quote:
+      "Vihanga's analytical approach and technical expertise helped us streamline repetitive tasks into automated, reliable systems. His solutions are practical, user-friendly, and consistently deliver real business value.",
+    name: "Suzanne Lewis",
+    role: "Senior Manager",
+    company: "McLarens Group",
+    image: "/images/testimonials/suzanne lewis.png",
   },
 ];
 

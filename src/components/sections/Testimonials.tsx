@@ -26,7 +26,14 @@ export function Testimonials() {
                 {t.quote}
               </blockquote>
 
-              <figcaption className="mt-6 flex items-center gap-2 border-t border-line pt-5">
+              <figcaption className="mt-6 flex items-center gap-4 border-t border-line pt-5">
+                {t.image ? (
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full object-cover border border-white/10"
+                  />
+                ) : null}
                 <div>
                   <div className="flex items-center gap-2">
                     <p className="font-display text-sm font-bold uppercase text-white">
