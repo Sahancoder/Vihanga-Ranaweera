@@ -95,9 +95,9 @@ export function Projects() {
                 </p>
 
                 {project.contributions && (
-                  <ul className="mt-4 flex-1 list-inside list-disc text-xs leading-relaxed text-muted/90">
+                  <ul className="mt-4 flex-1 list-outside list-disc pl-4 text-xs leading-relaxed text-muted/90 text-left">
                     {project.contributions.map((contribution, idx) => (
-                      <li key={idx} className="mb-1.5">
+                      <li key={idx} className="mb-1.5 pl-1">
                         {contribution}
                       </li>
                     ))}

@@ -47,7 +47,7 @@ export function SectionHeading({
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.1, margin: "0px 0px -10% 0px" }}
       className={center ? "mx-auto max-w-2xl text-center" : "max-w-3xl"}
     >
       <motion.p 

@@ -59,7 +59,7 @@ export function Hero() {
 
         {/* Legibility overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-bg/10 via-transparent to-transparent md:bg-gradient-to-r md:from-bg/90 md:via-bg/40 md:to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bg to-transparent md:h-1/3" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent md:h-1/3" />
 
         {/* Face Spotlight (to naturally light up the character) */}
         <div className="absolute top-[15%] right-[5%] md:top-[10%] md:right-[15%] h-[400px] w-[400px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
@@ -79,7 +79,7 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-start px-4 pb-20 pt-28 sm:px-6 md:justify-center lg:px-8"
+        className="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-end px-4 pb-12 pt-[40vh] sm:px-6 md:min-h-[88vh] md:justify-center md:pb-20 md:pt-28 lg:px-8"
       >
         <div className="max-w-2xl">
           {/* Availability pill */}
