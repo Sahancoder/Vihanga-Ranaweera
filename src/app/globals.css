@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens (Tailwind v4 CSS-first theme)                        */
+/*  Palette derived from the Dribbble reference shot.                  */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-bg: #050404;
+  --color-surface: #0d0e10;
+  --color-surface-2: #141517;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-text: #f2f3f3;
+  --color-muted: #a1a2a3;
+  --color-accent: #d8301a;
+  --color-accent-soft: #ce5e4d;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-chakra);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1e20;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reusable decorative utilities                                      */
+/* ------------------------------------------------------------------ */
+.glass-card {
+  border: 1px solid var(--color-line);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(20px);
+}
+
+.ambient-glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(216, 48, 26, 0.15) 0%,
+    rgba(79, 55, 48, 0.05) 50%,
+    transparent 100%
+  );
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.ambient-brown-glow {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(151, 129, 123, 0.12) 0%,
+    rgba(79, 55, 48, 0.03) 60%,
+    transparent 100%
+  );
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.stripe-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+}
+
+/* Skill meter */
+.skill-track {
+  position: relative;
+  overflow: hidden;
+  height: 0.875rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.skill-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-soft));
+  box-shadow: 0 0 24px rgba(216, 48, 26, 0.35);
+}
+
+/* A focus ring that survives the dark theme + glow overlays */
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
