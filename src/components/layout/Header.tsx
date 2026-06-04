@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { site } from "@/data/site";
+import { motion, AnimatePresence } from "framer-motion";
 
 const firstName = site.name.split(" ")[0];
 
@@ -71,20 +72,35 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div id="mobile-menu" className={open ? "block md:hidden" : "hidden"}>
-        <nav className="space-y-1 border-t border-line px-4 pb-4 pt-2">
-          {site.nav.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block rounded-md px-4 py-3 text-sm text-muted transition-colors hover:bg-white/5 hover:text-white"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            id="mobile-menu"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden"
+          >
+            <nav className="space-y-1 border-t border-line px-4 pb-4 pt-2">
+              {site.nav.map((link, i) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -15 }}
+                  transition={{ delay: i * 0.05, duration: 0.2 }}
+                  className="block rounded-md px-4 py-3 text-sm text-muted transition-colors hover:bg-white/5 hover:text-white"
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
