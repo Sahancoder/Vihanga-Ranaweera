@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { site } from "@/data/site";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export function Hero() {
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -13,21 +13,21 @@ export function Hero() {
     },
   };
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
     show: { 
       opacity: 1, 
       y: 0,
       filter: "blur(0px)",
-      transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } 
+      transition: { duration: 0.8, ease: "easeOut" } 
     },
   };
 
-  const maskReveal = {
+  const maskReveal: Variants = {
     hidden: { y: "100%" },
     show: { 
       y: 0,
-      transition: { duration: 1, ease: [0.25, 0.1, 0.25, 1] }
+      transition: { duration: 1, ease: "easeOut" }
     },
   };
 

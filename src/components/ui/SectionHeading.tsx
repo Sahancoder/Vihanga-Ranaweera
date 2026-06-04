@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 type SectionHeadingProps = {
   eyebrow: string;
@@ -16,7 +16,7 @@ export function SectionHeading({
   center = false,
 }: SectionHeadingProps) {
   // Stagger wrapper
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -24,7 +24,7 @@ export function SectionHeading({
     },
   };
 
-  const itemFade = {
+  const itemFade: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { 
       opacity: 1, 
@@ -33,7 +33,7 @@ export function SectionHeading({
     },
   };
 
-  const lineDraw = {
+  const lineDraw: Variants = {
     hidden: { scaleX: 0, opacity: 0 },
     show: { 
       scaleX: 1, 
