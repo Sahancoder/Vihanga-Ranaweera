@@ -59,8 +59,8 @@ export function TechStack() {
       >
         <Icon className="text-[#a1a1aa] w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] md:w-[42px] md:h-[42px] lg:w-[52px] lg:h-[52px] transition-colors duration-300" />
         
-        {/* Tooltip */}
-        <span className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 text-white text-[10px] uppercase tracking-widest px-2 py-1 rounded whitespace-nowrap pointer-events-none z-10 border border-white/10">
+        {/* Name (visible on all devices) */}
+        <span className="mt-3 text-[10px] md:text-xs uppercase tracking-widest text-muted group-hover:text-white transition-colors">
           {item.name}
         </span>
       </div>

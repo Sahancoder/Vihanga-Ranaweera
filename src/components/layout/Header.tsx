@@ -48,59 +48,47 @@ export function Header() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label="Toggle navigation menu"
-            className="flex h-11 w-11 items-center justify-center rounded-sm border border-line md:hidden"
+            className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-sm border border-line md:hidden"
           >
-            <span className="relative block h-3.5 w-5">
-              <span
-                className={`absolute left-0 block h-0.5 w-5 bg-white transition-all ${
-                  open ? "top-1.5 rotate-45" : "top-0"
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-1.5 block h-0.5 w-5 bg-white transition-all ${
-                  open ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute left-0 block h-0.5 w-5 bg-white transition-all ${
-                  open ? "top-1.5 -rotate-45" : "top-3"
-                }`}
-              />
-            </span>
+            <span
+              className={`block h-0.5 w-5 bg-white transition-all duration-300 ${
+                open ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-white transition-all duration-300 ${
+                open ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-white transition-all duration-300 ${
+                open ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            id="mobile-menu"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden"
-          >
-            <nav className="space-y-1 border-t border-line px-4 pb-4 pt-2">
-              {site.nav.map((link, i) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, x: -15 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -15 }}
-                  transition={{ delay: i * 0.05, duration: 0.2 }}
-                  className="block rounded-md px-4 py-3 text-sm text-muted transition-colors hover:bg-white/5 hover:text-white"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div 
+        id="mobile-menu" 
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="space-y-1 border-t border-line px-4 pb-4 pt-2">
+          {site.nav.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="block rounded-md px-4 py-3 text-sm text-muted transition-colors hover:bg-white/5 hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
