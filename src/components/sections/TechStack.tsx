@@ -49,6 +49,7 @@ export function TechStack() {
 
   const yBackground = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const renderIcon = (item: { name: string; icon: any }, i: number) => {
     const Icon = item.icon;
     return (

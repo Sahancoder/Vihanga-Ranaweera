@@ -10,7 +10,7 @@ export function Contact() {
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center">
         <p className="mb-6 font-display text-xs uppercase tracking-[0.25em] text-muted">
-          //Let&apos;s collaborate
+          <span className="opacity-50 mr-1">//</span> Let&apos;s collaborate
         </p>
 
         <h2 className="text-center font-display text-5xl font-extrabold leading-none tracking-tight text-white sm:text-7xl lg:text-8xl">

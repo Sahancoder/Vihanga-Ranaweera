@@ -9,7 +9,7 @@ interface ScrollRevealProps {
   delay?: number;
   stagger?: boolean;
   blur?: boolean;
-  as?: "div" | "span" | "li" | "ul";
+  as?: "div" | "span" | "li" | "ul" | "article" | "figure" | "p";
 }
 
 export function ScrollReveal({
@@ -20,6 +20,7 @@ export function ScrollReveal({
   blur = true,
   as = "div",
 }: ScrollRevealProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const MotionTag = motion[as] as any;
 
   // Staggered Container

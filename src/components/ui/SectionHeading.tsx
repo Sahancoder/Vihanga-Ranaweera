@@ -29,7 +29,7 @@ export function SectionHeading({
     show: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } 
+      transition: { duration: 0.6, ease: "easeOut" } 
     },
   };
 
@@ -38,7 +38,7 @@ export function SectionHeading({
     show: { 
       scaleX: 1, 
       opacity: 1,
-      transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 }
     },
   };
 
@@ -54,7 +54,8 @@ export function SectionHeading({
         variants={itemFade}
         className="mb-4 font-display text-xs uppercase tracking-[0.25em] text-accent"
       >
-        //{eyebrow}
+        <span className="opacity-50 mr-1">//</span>
+        {eyebrow}
       </motion.p>
       
       <motion.div variants={itemFade} className="relative inline-block">
