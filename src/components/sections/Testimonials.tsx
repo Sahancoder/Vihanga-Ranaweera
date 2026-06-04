@@ -1,4 +1,7 @@
+"use client";
+
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { site } from "@/data/site";
 
 export function Testimonials() {
@@ -15,9 +18,10 @@ export function Testimonials() {
           center
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ScrollReveal stagger className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {site.testimonials.map((t, i) => (
-            <figure
+            <ScrollReveal
+              as="figure"
               key={`${t.name}-${i}`}
               className="glass-card flex flex-col justify-between rounded-2xl p-7"
             >
@@ -51,9 +55,9 @@ export function Testimonials() {
                   </p>
                 </div>
               </figcaption>
-            </figure>
+            </ScrollReveal>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

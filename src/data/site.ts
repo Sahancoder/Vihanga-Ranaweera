@@ -40,11 +40,20 @@ export type Testimonial = {
   placeholder?: boolean;
 };
 
+export type Education = {
+  degree: string;
+  institution: string;
+  university: string;
+  summary: string;
+  image?: string;
+};
+
 export type Social = { label: string; href: string };
 
 const nav: NavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#contact", label: "Contact" },
@@ -262,6 +271,37 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const education: Education[] = [
+  {
+    degree: "MBA – Business Administration",
+    institution: "AIBT Campus",
+    university: "University of Gloucestershire, UK",
+    summary: "Master’s Stage focused on leadership, strategy, innovation, and business transformation.",
+    image: "/images/education/University_of_Gloucestershire__UK-removebg-preview.png",
+  },
+  {
+    degree: "BSc (Hons) Computing Science",
+    institution: "Achievers International Campus",
+    university: "University of Gloucestershire, UK",
+    summary: "Focused on software engineering, databases, web systems, and modern application development.",
+    image: "/images/education/University_of_Gloucestershire__UK-removebg-preview.png",
+  },
+  {
+    degree: "HND Artificial Intelligence & Data Science",
+    institution: "IIT",
+    university: "Robert Gordon University, UK",
+    summary: "Focused on artificial intelligence, data science, machine learning concepts, and practical computing skills.",
+    image: "/images/education/Robert Gordon University, UK.png",
+  },
+  {
+    degree: "Professional Diploma in Business Administration",
+    institution: "AIBT Campus",
+    university: "University of Gloucestershire, UK",
+    summary: "Focused on business management, administration, operations, and strategic business practices.",
+    image: "/images/education/University_of_Gloucestershire__UK-removebg-preview.png",
+  },
+];
+
 export const site = {
   // ── Identity ──────────────────────────────────────────────────────
   name: "Vihanga Ranaweera",
@@ -285,6 +325,7 @@ export const site = {
   nav,
   skills,
   experience,
+  education,
   projects,
   testimonials,
 };

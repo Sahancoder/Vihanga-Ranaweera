@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { 
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiFramer, 
@@ -6,6 +8,8 @@ import {
 } from "react-icons/si";
 import { FaMicrosoft, FaFileExcel, FaRobot, FaMobileScreen } from "react-icons/fa6";
 import { VscVscode } from "react-icons/vsc";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const techStack = [
   { name: "React", icon: SiReact },
@@ -36,6 +40,14 @@ export function TechStack() {
   const mid = Math.ceil(techStack.length / 2);
   const row1 = techStack.slice(0, mid);
   const row2 = techStack.slice(mid);
+  
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const yBackground = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
   const renderIcon = (item: { name: string; icon: any }, i: number) => {
     const Icon = item.icon;
@@ -55,7 +67,18 @@ export function TechStack() {
   };
 
   return (
-    <section className="relative overflow-hidden border-y border-line bg-white/[0.01] px-4 py-24 sm:px-6 lg:px-8">
+    <section ref={containerRef} className="relative overflow-hidden border-y border-line bg-white/[0.01] px-4 py-24 sm:px-6 lg:px-8">
+      
+      {/* Giant Parallax Background Text */}
+      <motion.div 
+        style={{ y: yBackground }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0"
+      >
+        <span className="font-display text-[100px] md:text-[200px] lg:text-[280px] font-black uppercase text-white/[0.03] tracking-widest whitespace-nowrap">
+          AUTOMATION
+        </span>
+      </motion.div>
+
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }

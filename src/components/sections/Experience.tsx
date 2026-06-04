@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { site } from "@/data/site";
 
 export function Experience() {
@@ -17,9 +20,10 @@ export function Experience() {
           subtitle="Where I've contributed — applying transformation thinking and software inside real organisations."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <ScrollReveal stagger className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {site.experience.map((exp) => (
-            <article
+            <ScrollReveal
+              as="article"
               key={exp.company}
               className="glass-card group flex flex-col rounded-2xl p-7 transition-colors hover:border-accent/40 sm:flex-row sm:items-start sm:gap-6"
             >
@@ -59,9 +63,9 @@ export function Experience() {
                   {exp.summary}
                 </p>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,4 +1,7 @@
+"use client";
+
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { site } from "@/data/site";
 
 const tagIconMap: Record<string, string> = {
@@ -43,11 +46,12 @@ export function Projects() {
           subtitle="A few things I've built and shaped. Each starts from a real problem and ends in something people use."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <ScrollReveal stagger className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
           {site.projects.map((project) => (
-            <article
+            <ScrollReveal
+              as="article"
               key={project.title}
-              className="glass-card group relative flex flex-col overflow-hidden rounded-2xl"
+              className="glass-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/5 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(216,48,26,0.15)]"
             >
               {/* Visual */}
               <div className="stripe-pattern relative flex aspect-[16/9] overflow-hidden items-center justify-center border-b border-line bg-surface-2">
@@ -59,13 +63,13 @@ export function Projects() {
                     muted
                     loop
                     playsInline
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 ) : project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 ) : (
                   <span className="font-display text-xs uppercase tracking-[0.3em] text-muted">
@@ -104,7 +108,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="flex items-center gap-1.5 rounded-full border border-line bg-white/5 px-3 py-1 font-display text-[10px] uppercase tracking-wider text-white"
+                      className="flex items-center gap-1.5 rounded-full border border-line bg-white/5 px-3 py-1 font-display text-[10px] uppercase tracking-wider text-white transition-colors duration-300 group-hover:border-white/20 group-hover:bg-white/10"
                     >
                       {tagIconMap[tag] && (
                         <img 
@@ -133,9 +137,9 @@ export function Projects() {
                   </div>
                 ) : null}
               </div>
-            </article>
+            </ScrollReveal>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

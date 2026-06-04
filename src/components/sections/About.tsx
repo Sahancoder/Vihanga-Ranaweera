@@ -1,5 +1,9 @@
+"use client";
+
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { site } from "@/data/site";
+import { motion } from "framer-motion";
 
 export function About() {
   return (
@@ -24,9 +28,10 @@ export function About() {
         />
 
         {/* Skills */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ScrollReveal stagger className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {site.skills.map((skill, i) => (
-            <article
+            <ScrollReveal
+              as="article"
               key={skill.label}
               className="glass-card flex flex-col justify-between rounded-2xl p-6"
             >
@@ -51,15 +56,18 @@ export function About() {
                   {skill.value}%
                 </div>
                 <div className="skill-track">
-                  <div
-                    className="skill-fill transition-[width] duration-1000"
-                    style={{ width: `${skill.value}%` }}
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.value}%` }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+                    className="skill-fill"
                   />
                 </div>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
