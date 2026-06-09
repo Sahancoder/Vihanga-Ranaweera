@@ -77,23 +77,21 @@ const skills: Skill[] = [
 const experience: Experience[] = [
   {
     company: "McLarens Group of Companies",
-    role: "Business Transformation Intern / Project Contributor",
-    period: "Internship", // TODO: add dates if you'd like (e.g. "2024 — Present")
+    role: "Business Transformation – AI & Automation Engineer",
+    period: "2025 – Present",
     logo: "/images/experience/mclarens-75.svg",
     logoAlt: "McLarens Group 75 years logo",
     summary:
-      "Contributed to digital transformation, workflow improvement, process mapping, and internal software solution development within the group environment.",
+      "Contributing to digital transformation, workflow improvement, process mapping, AI-based automation, and internal solution development within the group environment. Focused on reducing manual work, improving operational visibility, and building practical automation workflows for business teams.",
   },
   {
-    // TODO: confirm what MAS represents and replace this placeholder.
-    company: "MAS Holdings",
-    role: "Role TBD",
-    period: "TBD",
+    company: "MAS Capital (PVT) LTD – KREEDA",
+    role: "Digital Transformation Intern",
+    period: "2024 – 2025",
     logo: "/images/experience/mas.png",
-    logoAlt: "MAS Holdings logo",
+    logoAlt: "MAS Capital KREEDA logo",
     summary:
-      "Placeholder — tell me your role and a one-line summary of what you did here, or I'll remove this entry.",
-    placeholder: true,
+      "Worked on digital transformation initiatives using Power Apps, Python, workflow automation, and system solution implementation. Supported project handling and managed critical internal systems as a System Super Admin across KREEDA cluster companies.",
   },
 ];
 
@@ -306,22 +304,19 @@ const education: Education[] = [
 export const site = {
   // ── Identity ──────────────────────────────────────────────────────
   name: "Vihanga Ranaweera",
-  // TODO: confirm the public-facing headline/role for the hero.
-  role: "Business Transformation & Software Solutions",
+  role: "Business Transformation & AI Automation",
   location: "Sri Lanka",
   available: true,
   email: "vihangarpersonal@gmail.com",
   phone: "+94762610110",
   description:
-    "Vihanga Ranaweera — focused on digital transformation, workflow improvement, process mapping, and internal software solution development.",
+    "Business transformation, AI, and automation expertise focused on creating intelligent, streamlined workflows that reduce manual work and improve decision-making.",
 
-  // TODO: replace with your own one-liner.
   tagline:
-    "Turning complex business processes into clean, functional software and streamlined workflows.",
+    "Turning complex business processes into intelligent, automated, and streamlined workflows.",
 
-  // TODO: replace with a real 2–4 sentence bio.
   about:
-    "I work at the intersection of business transformation and software, mapping messy real-world processes and rebuilding them as reliable internal tools. My focus is practical impact: clearer workflows, less manual work, and software that teams actually want to use.",
+    "I work at the intersection of business transformation, AI, and automation, mapping messy real-world processes and rebuilding them as smarter, faster, and more reliable workflows. My focus is practical impact: clearer processes, less manual work, better decision-making, and automation solutions that teams actually want to use.",
 
   socials,
   nav,

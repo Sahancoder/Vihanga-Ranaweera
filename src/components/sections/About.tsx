@@ -20,7 +20,7 @@ export function About() {
             <>
               Business transformation,{" "}
               <span className="font-light italic text-muted">
-                built into software.
+                powered by AI and automation.
               </span>
             </>
           }

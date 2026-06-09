@@ -17,7 +17,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Associated with"
           title="Experience & Associations"
-          subtitle="Where I've contributed — applying transformation thinking and software inside real organisations."
+          subtitle="Where I've contributed — applying transformation thinking, AI, automation, and workflow improvement inside real organisations."
         />
 
         <ScrollReveal stagger className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
