@@ -7,8 +7,6 @@
 
 export type NavLink = { href: string; label: string };
 
-export type Skill = { label: string; value: number; hint?: string };
-
 export type Experience = {
   company: string;
   role: string;
@@ -64,14 +62,6 @@ const socials: Social[] = [
   { label: "LinkedIn", href: "#" },
   { label: "GitHub", href: "#" },
   { label: "WhatsApp", href: "https://wa.me/94762610110?text=Hi%20Vihanga%2C%20I%20recently%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20or%20opportunity%20with%20you.%20Let%20me%20know%20when%20you%20are%20available!" },
-];
-
-// TODO: replace with your real skills & honest proficiency values.
-const skills: Skill[] = [
-  { label: "Process Mapping", value: 90, hint: "BPMN · Workflows" },
-  { label: "Software Development", value: 80, hint: "Internal tools" },
-  { label: "Digital Transformation", value: 85, hint: "Strategy → delivery" },
-  { label: "Workflow Automation", value: 75, hint: "Efficiency" },
 ];
 
 const experience: Experience[] = [
@@ -272,7 +262,7 @@ const testimonials: Testimonial[] = [
 
 const education: Education[] = [
   {
-    degree: "MBA – Business Administration",
+    degree: "MBA – Business Administration(Reading)",
     institution: "AIBT Campus",
     university: "University of Gloucestershire, UK",
     summary: "Master’s Stage focused on leadership, strategy, innovation, and business transformation.",
@@ -320,7 +310,6 @@ export const site = {
 
   socials,
   nav,
-  skills,
   experience,
   education,
   projects,

@@ -4,13 +4,29 @@ export function Contact() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden border-t border-line px-4 pb-12 pt-28 sm:px-6 lg:px-8"
+      className="relative isolate overflow-hidden border-t border-line px-4 pb-12 pt-24 sm:px-6 sm:pt-28 lg:px-8"
     >
-      <div className="ambient-glow absolute bottom-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2" />
+      <div className="absolute inset-0 -z-20 bg-bg">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center opacity-25"
+        >
+          <source src="/vid/lets work togather .mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(5,4,4,0.92)_0%,rgba(5,4,4,0.58)_34%,rgba(216,48,26,0.16)_62%,rgba(5,4,4,0.94)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_38%,rgba(216,48,26,0.18),transparent_48%)] mix-blend-screen" />
+      <div className="ambient-glow absolute bottom-0 left-1/2 -z-10 h-[500px] w-[800px] -translate-x-1/2" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center">
         <p className="mb-6 font-display text-xs uppercase tracking-[0.25em] text-muted">
-          <span className="opacity-50 mr-1">//</span> Let&apos;s collaborate
+          <span className="mr-1 opacity-50">{"//"}</span> Let&apos;s collaborate
         </p>
 
         <h2 className="text-center font-display text-5xl font-extrabold leading-none tracking-tight text-white sm:text-7xl lg:text-8xl">
