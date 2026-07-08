@@ -58,10 +58,9 @@ const nav: NavLink[] = [
 ];
 
 const socials: Social[] = [
-  // TODO: add your real links.
-  { label: "LinkedIn", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "WhatsApp", href: "https://wa.me/94762610110?text=Hi%20Vihanga%2C%20I%20recently%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20or%20opportunity%20with%20you.%20Let%20me%20know%20when%20you%20are%20available!" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vihanga-ranaweera-176b71418/" },
+  { label: "GitHub", href: "https://github.com/vr-automater" },
+  { label: "WhatsApp", href: "https://wa.me/94715144634?text=Hi%20Vihanga%2C%20I%20recently%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20project%20or%20opportunity%20with%20you.%20Let%20me%20know%20when%20you%20are%20available!" },
 ];
 
 const experience: Experience[] = [
@@ -298,7 +297,7 @@ export const site = {
   location: "Sri Lanka",
   available: true,
   email: "vihangarpersonal@gmail.com",
-  phone: "+94762610110",
+  phone: "+94 71 514 4634",
   description:
     "Business transformation, AI, and automation expertise focused on creating intelligent, streamlined workflows that reduce manual work and improve decision-making.",
 
